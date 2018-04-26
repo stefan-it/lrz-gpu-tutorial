@@ -3,11 +3,11 @@
 This repository contains some tips for using the LRZ GPUs (mainly the *DGX-1*
 supercomputer).
 
-**Notice**: This is not an official repository from the LRZ.
+**Notice**: This is not an official repository from LRZ.
 
 ## SSH-key setup
 
-In order properly login into reserved container, it is very imporant to create
+In order to properly login into reserved container, it is very imporant to create
 a private/public SSH key pair.
 
 Please refer to the [LRZ documentation](https://www.lrz.de/services/compute/ssh/)
@@ -15,7 +15,8 @@ for setting up a SSH-key pair. Another excellent reference is the
 [GitLab](https://docs.gitlab.com/ee/ssh/) documentation.
 
 **Notice**: It is very important that you use a strong password for your new
-SSH key pair. The LRZ security policies forbid any empty key!
+SSH key pair. The LRZ security policies forbid any empty key! So you are forced
+to enter a password.
 
 ### Optional: strong encryption for SSH key pair
 
@@ -30,7 +31,7 @@ ssh-keygen -t ed25519
 ## Store public SSH-key in LRZ Data Lab
 
 Once the SSH key pair was created, the **public** key must be stored in your
-settings on the DataLab reservation website.
+settings on the Data Lab reservation website.
 
 Visit the [LRZ Data Lab](https://datalab.lrz.de) website. This website is only
 accessible within the MWN (Münchner Wissenschaftsnetz). If you're not in the
@@ -46,7 +47,7 @@ Locate your previously created public key (ending with `.pub`), e.g.:
 cat ~/id_rsa.pub
 ```
 
-And copy this into the text field named "SSH Public Key" in the Data Lab. The
+and copy this into the text field named "SSH Public Key" in the Data Lab. The
 next figure shows an example:
 
 ![LRZ Data Lab](figures/profile_ssh_key.png)
@@ -67,13 +68,15 @@ and choose "Create reservation". The following dialog pops up:
 
 ![LRZ Data Lab - Change calendar](figures/reservation.png)
 
-Now you can specify duration and the desired container. In this example we choose
-the latest "TensorFlow" container.
+You are now able to specify duration and the desired container. In this example
+we choose the latest "TensorFlow" container.
 
 ## Login into container
 
 Once your reservation is ready, you will receive an email with the following
-subject: "Your DGX-1 application "TensorFlow 17.10" is ready.
+subject:
+
+> "Your DGX-1 application "TensorFlow 17.10" is ready.
 
 Within the MWN you can now login into the container using your previously
 created key:
@@ -90,7 +93,7 @@ correctly you are now logged in. Congratulations!
 
 # Container - first steps
 
-Inside the container you can now install your desired software packages. The
+Inside the container you can install your desired software packages. The
 next steps shows the installation of some very useful tools when you are working
 in the container.
 
@@ -137,5 +140,5 @@ NVIDIA *DGX-1* supercomputer.
 
 Contributions to this tutorial are highly welcome!
 
-For questions about this small tutorial just open an issue on GitHub here. If
-you have any corrections or further improvements please open a pull request.
+For questions about this tutorial just open an issue on GitHub here. If you have
+any corrections or further improvements please open a pull request.
