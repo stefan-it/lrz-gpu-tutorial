@@ -1,6 +1,6 @@
-# LRZ GPU tips
+# LRZ GPU tutorial
 
-This repository contains some tips for using the LRZ GPUs (mainly the *DGX-1*
+This repository contains some hints for using the LRZ GPUs (mainly the *DGX-1*
 supercomputer).
 
 **Notice**: This is not an official repository from LRZ.
