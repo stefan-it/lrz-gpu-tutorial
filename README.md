@@ -1,6 +1,7 @@
 # LRZ GPU tutorial
 
-This repository contains some hints for using the LRZ GPUs (mainly the *DGX-1*
+This repository contains some hints for using the LRZ GPUs (mainly the
+[*DGX-1*](https://www.lrz.de/services/compute/special_systems/machine_learning/)
 supercomputer).
 
 **Notice**: This is not an official repository from LRZ.
