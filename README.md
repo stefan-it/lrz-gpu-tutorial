@@ -45,7 +45,7 @@ Once you have logged into the LRZ Data Lab click on "My Account" and choose
 Locate your previously created public key (ending with `.pub`), e.g.:
 
 ```bash
-cat ~/id_rsa.pub
+cat ~/id_rsa.pub # or use cat ~/id_ed25519.pub in case of Ed25519
 ```
 
 and copy this into the text field named "SSH Public Key" in the Data Lab. The
