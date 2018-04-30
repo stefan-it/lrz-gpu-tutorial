@@ -34,7 +34,7 @@ ssh-keygen -t ed25519
 Once the SSH key pair was created, the **public** key must be stored in your
 settings on the Data Lab reservation website.
 
-Visit the [LRZ Data Lab](https://datalab.lrz.de) website. This website is only
+Visit the [LRZ Data Lab](https://datalab.srv.lrz.de) website. This website is only
 accessible within the MWN (Münchner Wissenschaftsnetz). If you're not in the
 MWN you can use a VPN connection. In this case you can find necessary
 information [here](https://www.lrz.de/services/netz/mobil/vpn/).
