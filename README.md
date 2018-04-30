@@ -141,5 +141,6 @@ NVIDIA *DGX-1* supercomputer.
 
 Contributions to this tutorial are highly welcome!
 
-For questions about this tutorial just open an issue on GitHub here. If you have
-any corrections or further improvements please open a pull request.
+For questions about this tutorial just open an issue on GitHub
+[here](https://github.com/stefan-it/lrz-gpu-tutorial/issues). If you have any
+corrections or further improvements please open a pull request.
