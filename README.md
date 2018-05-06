@@ -2,7 +2,7 @@
 
 This repository contains some hints for using the LRZ GPUs (mainly the
 [*DGX-1*](https://www.lrz.de/services/compute/special_systems/machine_learning/)
-supercomputer).
+supercomputer and virtual servers with a single P100).
 
 **Notice**: This is not an official repository from LRZ.
 
@@ -53,58 +53,17 @@ next figure shows an example:
 
 ![LRZ Data Lab](figures/profile_ssh_key.png)
 
-## Make reservation
+## Resources
 
-Once you have stored your public SSH key in your profile settings, you can
-make a reservation e.g. on the *DGX-1*.
+The LRZ currently provides access to the following GPU systems:
 
-Goto "Schedule" and click on "Resource Calender". Now you can see the full
-calender with all booked reservations. Under the "Change Calendar" option you
-can filter the available LRZ resources. We use *DGX-1* now:
+* NVIDIA *DGX-1* with 8 P100
+* Virtual server with 1 P100 and *Docker*
 
-![LRZ Data Lab - Change calendar](figures/change_calendar.png)
+Thus, the *DGX-1* tutorial can be found [here](dgx-1.md).
 
-Now you can find a free slot in the calendar. Click on a desired calendar date
-and choose "Create reservation". The following dialog pops up:
-
-![LRZ Data Lab - Change calendar](figures/reservation.png)
-
-You are now able to specify duration and the desired container. In this example
-we choose the latest "TensorFlow" container.
-
-## Login into container
-
-Once your reservation is ready, you will receive an email with the following
-subject:
-
-> "Your DGX-1 application "TensorFlow 17.10" is ready.
-
-Within the MWN you can now login into the container using your previously
-created key:
-
-```bash
-ssh -p 10022 -l <your-lrz-kennung> -i ~/id_rsa.pub <ip-address-mail>
-```
-
-You need to specify your LRZ kennung, public key and the IP address of the
-container. You find the IP address in the email.
-
-You will be asked for your password of the SSH key. When everything was setup
-correctly you are now logged in. Congratulations!
-
-# Container - first steps
-
-Inside the container you can install your desired software packages. The
-next steps shows the installation of some very useful tools when you are working
-in the container.
-
-## Update
-
-It is highly recommended to update the Ubuntu package list via:
-
-```bash
-sudo apt update
-```
+The tutorial for the virtual
+server system can be found [here](single-gpu.md).
 
 ## Byobu
 
@@ -115,13 +74,13 @@ your connection to the container is also capped and the training is also aborted
 
 Just use this little tool `byobu` and you can "resume" your terminal connection.
 
-It can be installed via:
+It can be installed via (this is only necessary when you working on the *DGX-1*:
 
 ```bash
 sudo apt install byobu
 ```
 
-Now start a new terminal session with:
+Now start a new terminal session with (on *DGX-1* or on the virtual server):
 
 ```bash
 byobu
