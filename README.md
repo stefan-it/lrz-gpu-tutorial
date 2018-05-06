@@ -74,7 +74,7 @@ your connection to the container is also capped and the training is also aborted
 
 Just use this little tool `byobu` and you can "resume" your terminal connection.
 
-It can be installed via (this is only necessary when you working on the *DGX-1*:
+It can be installed via (this is only necessary when you working on the *DGX-1*):
 
 ```bash
 sudo apt install byobu

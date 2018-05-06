@@ -89,7 +89,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-Please make sure, that `/usr/bin/dockerd` is properly started with the
+Please make sure that `/usr/bin/dockerd` is properly started with the
 `--mtu=1200` option:
 
 ```bash
@@ -110,7 +110,7 @@ sudo docker build -t keras https://github.com/stefan-it/deep-docker.git#master:k
 Then `nvidia-docker` can be used to run the container.
 
 The virtual server provides a huge SSD storage with 800 GB of space. The
-mount point of the SSD storage is also mounted in the *Docker* container. Thus
+mount point of the SSD storage is also mounted in the *Docker* container. Thus,
 you can put your software and data under `/ssdtemp` in the virtual server and
 you can access it under `/mnt` in the *Docker* container later:
 
@@ -123,8 +123,8 @@ now (with a new login prompt).
 
 ## Optional: Train a convolutional neural network for text classification
 
-To test the *TensorFlow* and *Keras* installation, we will execute the training
-example for *Keras*:
+To test the *TensorFlow* and *Keras* installation, a training example from
+*Keras* is used:
 
 ```bash
 apt install wget
