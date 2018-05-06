@@ -21,7 +21,7 @@ we choose "Ubuntu 16.04 CUDA 9.1 PGI 17.9 nvidia-docker".
 Once your reservation is ready, you will receive an email with the following
 subject:
 
-> "Your GPU-enabled server in Slot C is ready.
+> "Your GPU-enabled server in Slot [A-D] is ready.
 
 Within the MWN you can now login into the container using your previously
 created key:
@@ -48,6 +48,20 @@ packages and use *Docker* for running your software inside a *Docker* container.
 In this tutorial we will use a *Docker* image for *TensorFlow* and *Keras*.
 This image needs to be built first. After that, `nvidia-docker` is used to run
 *Docker* images.
+
+Of course you can use other *Docker* images. Here comes a short list of possible
+options:
+
+* Offical NVIDIA [Docker Hub](https://hub.docker.com/r/nvidia/cuda/) - several
+  images for different *CUDA* and *cudnn* versions are available
+
+* NVIDIA [Compute Cloud](https://www.nvidia.com/en-us/gpu-cloud/) - after
+  registration you will get access to NVIDIA optimized containers for e.g.
+  *TensorFlow*, *PyTorch* and many more. These containers are pretty the same
+  as containers on the *DGX-1*.
+
+In this tutorial we will use the *TensorFlow* image from
+[here](https://github.com/stefan-it/deep-docker) as example.
 
 ## *Docker* configuration
 
@@ -85,8 +99,7 @@ root      2236  1.7  0.0 1075872 38932 ?       Ssl  15:17   0:00 /usr/bin/docker
 
 ## Build *Docker* image
 
-The *TensorFlow* image from [here](https://github.com/stefan-it/deep-docker) is
-used as an example. It can easily be built with:
+Now the *TensorFlow* image can be built with:
 
 ```bash
 sudo docker build -t keras https://github.com/stefan-it/deep-docker.git#master:keras
@@ -94,13 +107,12 @@ sudo docker build -t keras https://github.com/stefan-it/deep-docker.git#master:k
 
 ## Start *Docker* container
 
-After the *Docker* image was successfully built, `nvidia-docker` can be used
-to run the container.
+Then `nvidia-docker` can be used to run the container.
 
 The virtual server provides a huge SSD storage with 800 GB of space. The
-mountpoint of the SSD storage is also mounted in the *Docker* container. Thus
+mount point of the SSD storage is also mounted in the *Docker* container. Thus
 you can put your software and data under `/ssdtemp` in the virtual server and
-you can access it under `/mnt` in the *Docker* container:
+you can access it under `/mnt` in the *Docker* container later:
 
 ```bash
 nvidia-docker run -v "/ssdtemp/:/mnt" -it --rm keras
