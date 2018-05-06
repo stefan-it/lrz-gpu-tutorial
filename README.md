@@ -63,7 +63,7 @@ The LRZ currently provides access to the following GPU systems:
 Thus, the *DGX-1* tutorial can be found [here](dgx-1.md).
 
 The tutorial for the virtual
-server system can be found [here](single-gpu).
+server system can be found [here](single-gpu.md).
 
 ## Byobu
 
