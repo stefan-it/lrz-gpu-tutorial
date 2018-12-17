@@ -56,6 +56,9 @@ Thus, the *DGX-1* tutorial can be found [here](dgx-1.md).
 The tutorial for the virtual
 server system can be found [here](single-gpu.md).
 
+Some nice videos from the High Performance Computing for AI workshop can be
+found [here](https://streams.tum.de/Mediasite/Catalog/catalogs/hpc4ai).
+
 ## Byobu
 
 Byobu is a nice text-based window manager and terminal multiplexer. Why should
