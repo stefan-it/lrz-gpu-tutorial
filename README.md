@@ -19,16 +19,6 @@ for setting up a SSH-key pair. Another excellent reference is the
 SSH key pair. The LRZ security policies forbid any empty key! So you are forced
 to enter a password.
 
-### Optional: strong encryption for SSH key pair
-
-Following the guidelines from [Secure Secure Shell](https://stribika.github.io/2015/01/04/secure-secure-shell.html)
-it is highly recommand to use strong encryption for your SSH key pair. For
-example you can use [Ed25519](https://ed25519.cr.yp.to/) to create keys:
-
-```bash
-ssh-keygen -t ed25519
-```
-
 ## Store public SSH-key in LRZ Data Lab
 
 Once the SSH key pair was created, the **public** key must be stored in your
