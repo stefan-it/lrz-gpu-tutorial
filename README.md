@@ -49,7 +49,7 @@ The LRZ currently provides access to the following GPU systems:
 
 * NVIDIA *DGX-1* with 8 P100
 * Virtual server with 1 P100 and *Docker*
-* NVIDIA *DGX-1* with 8 V100 (*coming soon*)
+* NVIDIA *DGX-1* with 8 V100 and *Docker*
 
 Thus, the *DGX-1* tutorial can be found [here](dgx-1.md).
 
